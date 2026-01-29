@@ -17,7 +17,7 @@ def generate_test_cases(user_input):
         return {"error": "Template file missing."}
     
     # Construct the Prompt
-    system_prompt = "You are an expert QA Engineer specialized in BDD. Your task is to generate high-quality Gherkin scenarios (Given/When/Then) based on the user's input. Follow the provided format exactly. Do not include preamble or conversational filler. Output ONLY the Gherkin scenarios."
+    system_prompt = "You are an expert QA Engineer specialized in BDD. Your task is to generate high-quality Gherkin scenarios (Given/When/Then) based on the user's input. You MUST include Test Case IDs (e.g., @TC01) and Priority levels (e.g., @P1, @P2) as tags above each scenario. Follow the provided format exactly. Do not include preamble or conversational filler. Output ONLY the Gherkin scenarios."
     
     full_prompt = f"""
 {system_prompt}
