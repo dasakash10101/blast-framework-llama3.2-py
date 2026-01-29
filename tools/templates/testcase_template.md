@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD033 -->
 # Feature: {feature_name}
 
 {feature_description}
