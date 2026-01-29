@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLAST Test Case Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ B.L.A.S.T. Generator</h1>
+            <p>Local LLM Test Case Architect</p>
+        </header>
+
+        <main id="chat-container">
+            <div id="messages">
+                <!-- Messages will appear here -->
+                <div class="message bot">
+                    <div class="bubble">Hello! Describe a feature, and I'll generate the test cases using Llama 3.2.</div>
+                </div>
+            </div>
+        </main>
+
+        <div class="input-area">
+            <textarea id="user-input" placeholder="Describe your feature (e.g., 'Login page with 2FA')..."></textarea>
+            <button id="send-btn">Generate 🚀</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

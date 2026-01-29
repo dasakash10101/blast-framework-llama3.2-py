@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+
+# BLAST Intermediates
+.tmp/
+*.log
+
+# Environment
+.env
+
+# IDEs
+.vscode/
+.idea/
