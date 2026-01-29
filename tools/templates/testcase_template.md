@@ -1,24 +1,26 @@
-# Test Case Suite
+# Feature: {feature_name}
 
-**Feature**: {feature_name}
-**Description**: {feature_description}
+{feature_description}
 
-## Positive Test Cases
+## Scenarios
 
-| ID | Title | Preconditions | Steps | Expected Result |
-|----|-------|---------------|-------|-----------------|
-| TC01 | | | | |
-| TC02 | | | | |
+Scenario: Successful {feature_name}
+  Given {precondition}
+  When {action}
+  Then {expected_result}
 
-## Negative Test Cases
+Scenario Outline: Failure in {feature_name} due to <reason>
+  Given {precondition}
+  When {invalid_action}
+  Then {error_message}
 
-| ID | Title | Preconditions | Steps | Expected Result |
-|----|-------|---------------|-------|-----------------|
-| TC_NEG_01 | | | | |
-| TC_NEG_02 | | | | |
+  Examples:
+    | reason | invalid_action | error_message |
+    |        |                |               |
 
 ## Edge Cases
 
-| ID | Title | Preconditions | Steps | Expected Result |
-|----|-------|---------------|-------|-----------------|
-| TC_EDGE_01 | | | | |
+Scenario: {edge_case_title}
+  Given {precondition}
+  When {edge_case_action}
+  Then {expected_result}

@@ -7,7 +7,7 @@ Generate detailed, structured test cases based on unstructured user input using 
 ## Inputs
 
 - **User Input**: A natural language description of the feature or requirement.
-- **Template**: A structured markdown template defining the expected output format.
+- **Template**: A Gherkin-style template (`Given/When/Then`) defining the expected output format.
 
 ## Process
 
