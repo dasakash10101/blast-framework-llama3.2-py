@@ -17,7 +17,7 @@ def generate_test_cases(user_input):
         return {"error": "Template file missing."}
     
     # Construct the Prompt
-    system_prompt = "You are an expert QA Engineer specialized in BDD. Your task is to generate high-quality Gherkin scenarios (Given/When/Then) based on the user's input. You MUST include Test Case IDs (e.g., @TC01) and Priority levels (e.g., @P1, @P2) as tags above each scenario. Follow the provided format exactly. Do not include preamble or conversational filler. Output ONLY the Gherkin scenarios."
+    system_prompt = "You are an expert QA Engineer specialized in BDD. Your task is to generate high-quality Gherkin scenarios based on the user's input. You MUST: 1) Use triple backticks with 'gherkin' language tags, 2) Capitalize all Gherkin keywords (GIVEN, WHEN, THEN, SCENARIO), 3) Use 2-space indentation for steps, 4) Include tags like @TC01 and @P1 above scenarios. Output ONLY the filled Markdown template."
     
     full_prompt = f"""
 {system_prompt}

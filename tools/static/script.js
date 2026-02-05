@@ -3,6 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const userInput = document.getElementById('user-input');
     const messagesDiv = document.getElementById('messages');
 
+    // Configure marked to use highlight.js
+    marked.setOptions({
+        highlight: function (code, lang) {
+            const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+            return hljs.highlight(code, { language }).value;
+        },
+        langPrefix: 'hljs language-'
+    });
+
     function addMessage(text, sender) {
         const msgDiv = document.createElement('div');
         msgDiv.className = `message ${sender}`;
@@ -12,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (sender === 'bot') {
             bubble.innerHTML = marked.parse(text);
+            // Highlight all code blocks in the newly added bubble
+            bubble.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
         } else {
             bubble.textContent = text;
         }
